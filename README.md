@@ -11,7 +11,7 @@
 
 # 目录
 
-* [项目规划](docs/1.plan.md)
+* [项目规划](<1.plan.md>)
 * [路由设计](docs/2.route.md)
 * [控制器设计](docs/3.controller.md)
 * [配置设计](docs/4.config.md)
