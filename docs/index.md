@@ -11,12 +11,12 @@
 
 # 目录
 
-* [项目规划](docs/1.plan.md)
-* [路由设计](docs/2.route.md)
-* [控制器设计](docs/3.controller.md)
-* [配置设计](docs/4.config.md)
-* [视图设计](docs/5.view.md)
-* [数据库操作](docs/6.dbutil.md)
-* [增删改查](docs/7.crud.md)
+* [项目规划](1.plan.md)
+* [路由设计](2.route.md)
+* [控制器设计](3.controller.md)
+* [配置设计](4.config.md)
+* [视图设计](5.view.md)
+* [数据库操作](6.dbutil.md)
+* [增删改查](7.crud.md)
 
-接下来开始我们的 [MVC框架实现](docs/1.plan.md) 吧~
+接下来开始我们的 [MVC框架实现](1.plan.md) 吧~
