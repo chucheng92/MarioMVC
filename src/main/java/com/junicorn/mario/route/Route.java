@@ -5,7 +5,7 @@ import java.lang.reflect.Method;
 /**
  * 路由
  * @author 哓哓
- * 所有的请求在路由，匹配在path，
+ * 所有的请求在程序中是一个路由，匹配在path，
  * 执行靠action，处于controller中
  */
 public class Route {
@@ -25,11 +25,11 @@ public class Route {
 	private Object controller;
 	
 	/**
-	 * 构造
+	 * 构造方法
 	 */
 	public Route() {
 
-	}
+	} 
 
 	// ===================================
 	// getters/setters
