@@ -3,14 +3,19 @@ package com.junicorn.mario;
 import java.lang.reflect.Method;
 
 import com.junicorn.mario.config.ConfigLoader;
+import com.junicorn.mario.render.JspRender;
+import com.junicorn.mario.render.Render;
 import com.junicorn.mario.route.Routers;
+import com.junicorn.mario.servlet.wrapper.Request;
+import com.junicorn.mario.servlet.wrapper.Response;
 
 /**
- * Mario
+ * Mario单例
  * @author 哓哓
  * 添加路由
  * 读取资源文件
  * 读取配置
+ * 渲染器等
  */
 public class Mario {
 	
@@ -29,11 +34,17 @@ public class Mario {
 	 */
 	private boolean init = false;
 	
+	/**
+	 * 渲染器
+	 */
+	private Render render;
+	
 	// ================================
 	// Mario设置为uniqueMario单例全局对象
 	private Mario() {
 		routers = new Routers();
 		configLoader = new ConfigLoader();
+		render = new JspRender();
 	}
 	
 	private static class MarioHolder {
@@ -91,7 +102,31 @@ public class Mario {
 		return routers;
 	}
 	
+	/**
+	 * 添加路由
+	 * @param path			映射的path
+	 * @param methodName	方法名称
+	 * @param controller	控制器对象
+	 * @return				返回Mario
+	 */
 	public Mario addRoute(String path, String methodName, Object controller) {
-		Method method = controller.getClass().getMethod(methodName, Request.class, Response)
+		try {
+			Method method = controller.getClass().getMethod(methodName, Request.class, Response.class);
+			this.routers.addRoute(path, method, controller);
+		} catch (NoSuchMethodException e) {
+			e.printStackTrace();
+		} catch (SecurityException e) {
+			e.printStackTrace();
+		}
+		return this;
 	}
+
+	public Render getRender() {
+		return render;
+	}
+
+	public void setRender(Render render) {
+		this.render = render;
+	}
+	
  }

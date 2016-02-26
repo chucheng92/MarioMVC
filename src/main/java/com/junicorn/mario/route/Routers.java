@@ -39,7 +39,7 @@ public class Routers {
 		route.setController(controller);
 		
 		routes.add(route);
-		log.info("Add Route:[" + path + "]");
+		log.info("======Routers -> Add Route:[" + path + "]");
 	}
 
 	// ========================
