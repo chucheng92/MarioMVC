@@ -8,11 +8,11 @@ public class RouteMatcherTest {
 	
 	@Test
 	public void testMatchesPath() {
-		System.out.println(matchesPath("/users/:uid", "/users/23"));
+		System.out.println(matchesPath("/users/:uid23123321:dd", "/users/2"));
 	}
 	
 	private boolean matchesPath(String routePath, String pathToMatch) {
-		routePath = routePath.replaceAll(PathUtil.VAR_REGEX, "[^#/?]+");
+		routePath = routePath.replaceAll(PathUtil.VAR_REGEX, PathUtil.VAR_REPLACE);
 		
 		System.out.println(routePath);
 		

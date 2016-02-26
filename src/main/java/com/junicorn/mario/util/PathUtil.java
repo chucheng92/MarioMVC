@@ -11,7 +11,7 @@ public class PathUtil {
 	public static final String VAR_REPLACE = "([^#/?]+)";
 	
 	private static final String SLASH = "/";
-	
+			
 	public static String getRelativePath(HttpServletRequest request) {
 		String path = request.getRequestURI();
 		String contextPath = request.getContextPath();
