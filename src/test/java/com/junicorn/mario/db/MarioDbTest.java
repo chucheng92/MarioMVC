@@ -1,6 +1,7 @@
 package com.junicorn.mario.db;
 
 import java.util.HashMap;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -19,17 +20,16 @@ public class MarioDbTest {
 
 //		testGet();
 //		testGet2();
-		// testGetList();
-		// testGetList2();
-		testGetMap();
+//		 testGetList();
+		 testGetList2();
+//		testGetMap();
 	}
 
 	//  带参get测试
 	public static void testGet() {
 		Map<String, Object> map = new HashMap<>();
 		map.put("name", "rose");
-		map.put("id", 3);
-		User user = MarioDb.get("select * from t_user where name = :name && id = :id", User.class, map);
+		User user = MarioDb.get("select * from t_user where name = :name", User.class, map);
 		System.out.println(user);
 	}
 
@@ -47,12 +47,13 @@ public class MarioDbTest {
 			System.out.println(u);
 		}
 	}
-
+	
 	// 带参getList带参
 	public static void testGetList2() {
 		Map<String, Object> map = new HashMap<>();
 		map.put("name", "rose");
-		List<User> list = MarioDb.getList("select * from t_user where name = :name", User.class, map);
+		map.put("id", 2);
+		List<User> list = MarioDb.getList("select * from t_user where name = :name || id = :id", User.class, map);
 
 		for (User u : list) {
 			System.out.println(u);
