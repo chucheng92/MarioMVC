@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
+import java.util.logging.Logger;
 
 import com.junicorn.mario.util.PathUtil;
 
@@ -15,6 +16,8 @@ import com.junicorn.mario.util.PathUtil;
  *
  */
 public class RouteMatcher {
+	
+	private static final Logger log = Logger.getLogger(RouteMatcher.class.getName());
 	
 	private List<Route> routes;
 	
@@ -42,7 +45,7 @@ public class RouteMatcher {
 		
 		// 优先匹配原则
 		giveMatch(path, matchRoutes);
-		
+		log.info("===========路由选择=========");
 		return matchRoutes.size() > 0 ? matchRoutes.get(0) : null;
 	}
 	

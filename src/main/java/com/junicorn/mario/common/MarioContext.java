@@ -1,4 +1,6 @@
-package com.junicorn.mario;
+package com.junicorn.mario.common;
+
+import java.util.logging.Logger;
 
 import javax.servlet.ServletContext;
 
@@ -12,6 +14,8 @@ import com.junicorn.mario.servlet.wrapper.Response;
  */
 public class MarioContext {
 	
+	private static final Logger log = Logger.getLogger(MarioContext.class.getName());
+			
 	private static final ThreadLocal<MarioContext> Context = new ThreadLocal<>();
 	
 	private ServletContext servletContext;
@@ -33,6 +37,7 @@ public class MarioContext {
 		marioContext.request = request;
 		marioContext.response = response;
 		Context.set(marioContext);
+		log.info("===========线程上下文初始化完毕=========");
 	}
 	
 	public static void remove() {

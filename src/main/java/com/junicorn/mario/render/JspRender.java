@@ -2,14 +2,16 @@ package com.junicorn.mario.render;
 
 import java.io.IOException;
 import java.io.Writer;
+import java.util.logging.Logger;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.junicorn.mario.Const;
-import com.junicorn.mario.Mario;
-import com.junicorn.mario.MarioContext;
+import com.junicorn.mario.common.Const;
+import com.junicorn.mario.common.Mario;
+import com.junicorn.mario.common.MarioContext;
+import com.junicorn.mario.route.RouteMatcher;
 
 /**
  * JSP渲染实现
@@ -17,7 +19,9 @@ import com.junicorn.mario.MarioContext;
  *
  */
 public class JspRender implements Render {
-
+	
+	private static final Logger log = Logger.getLogger(JspRender.class.getName());
+	
 	@Override
 	public void render(String view, Writer writer) {
 		String viewPath = getViewPath(view);
@@ -51,6 +55,7 @@ public class JspRender implements Render {
 		if (!view.endsWith(viewSuffix)) {
 			view += viewSuffix;
 		}
+		log.info("===========定位视图位置=========");
 		return viewPath.replaceAll("[/]+", "/");
 	}
 }

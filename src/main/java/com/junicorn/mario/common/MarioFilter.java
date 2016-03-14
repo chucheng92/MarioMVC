@@ -1,4 +1,4 @@
-package com.junicorn.mario;
+package com.junicorn.mario.common;
 
 import java.io.IOException;
 import java.lang.reflect.Method;
@@ -51,7 +51,7 @@ public class MarioFilter implements Filter {
 			servletContext = filterConfig.getServletContext();
 			// 框架初始化完毕 路由添加成功 数据连接建立
 			// TODO
-			System.out.println("======MarioFilter -> 框架初始化完毕 路由添加成功 数据连接建立");
+			log.info("======MarioFilter -> 框架初始化完毕 路由添加成功 数据连接建立");
 			mario.setInit(true);
 		}
 	}
@@ -111,6 +111,7 @@ public class MarioFilter implements Filter {
 	
 	private Object executeMethod(Object object, Method method, Request request, Response response) {
 		int len = method.getParameterTypes().length;
+		method.setAccessible(true);
 		//TODO
 		System.out.println("=====MarioFilter -> method.length=" + len);
 		if (len > 0) {

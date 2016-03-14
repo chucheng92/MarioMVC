@@ -3,8 +3,8 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.junicorn</groupId>
 	<artifactId>mvc-mario</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-
+	<version>1.0.1</version>
+	<packaging>jar</packaging>
 	<name>mvc-mario</name>
 	<url>https://github.com/lemonjing/mvc-mario</url>
 
@@ -19,6 +19,7 @@
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<version>4.12</version>
+			<scope>provided</scope>
 		</dependency>
 
 		<dependency>
@@ -39,6 +40,7 @@
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
 			<version>5.1.37</version>
+			<scope>provided</scope>
 		</dependency>
 	</dependencies>
 
@@ -56,6 +58,4 @@
 			</plugin>
 		</plugins>
 	</build>
-
-
 </project>

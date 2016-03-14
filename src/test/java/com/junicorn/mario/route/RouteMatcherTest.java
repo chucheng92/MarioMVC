@@ -8,7 +8,7 @@ public class RouteMatcherTest {
 	
 	@Test
 	public void testMatchesPath() {
-		System.out.println(matchesPath("/users/:uid23123321:dd", "/users/2"));
+		System.out.println(matchesPath("/users/:uid23123321", "/users/2"));
 	}
 	
 	private boolean matchesPath(String routePath, String pathToMatch) {

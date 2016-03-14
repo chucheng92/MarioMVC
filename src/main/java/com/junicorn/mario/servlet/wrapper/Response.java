@@ -6,7 +6,7 @@ import java.io.OutputStream;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletResponse;
 
-import com.junicorn.mario.Mario;
+import com.junicorn.mario.common.Mario;
 import com.junicorn.mario.render.Render;
 
 /**

@@ -1,4 +1,4 @@
-package com.junicorn.mario;
+package com.junicorn.mario.common;
 
 /**
  * 框架初始化的接口
