@@ -3,7 +3,7 @@
 通过使用Java语言实现一个完整的框架设计，这个框架中主要内容有第一小节介绍的Web框架的结构规划，例如采用MVC模式来进行开发，程序的执行流程设计等内容；第二小节介绍框架的第一个功能：路由，如何让访问的URL映射到相应的处理逻辑；第三小节介绍处理逻辑，如何设计一个公共的 `调度器`，对象继承之后处理函数中如何处理response和request；第四小节至第六小节介绍如何框架的一些辅助功能，例如配置信息，数据库操作等；最后介绍如何基于Web框架实现一个简单的增删改查，包括User的添加、修改、删除、显示列表等操作。
 
 
-### MVC-Mario框架结构
+### MarioMVC 框架结构
 
 ![](https://github.com/Lemonjing/resources/blob/master/pics/mario1.jpg)
 
@@ -21,7 +21,7 @@ servelet包：对HttpRequest和HttpResponse简单封装
 
 util包：路径处理工具、异常处理工具、反射工具
 
-### MVC-Mario请求流程
+### MarioMVC 请求流程
 
 准备工作：
 

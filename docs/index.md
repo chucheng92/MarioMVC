@@ -6,8 +6,8 @@
 
 ![](http://i.imgur.com/QH8SRfB.png)
 
-- 项目源码：[https://github.com/lemonjing/mvc-mario](https://github.com/lemonjing/mvc-mario)
-- 示例代码：[https://github.com/lemonjing/mario-sample](https://github.com/lemonjing/mario-sample)
+- 项目源码：[https://github.com/Lemonjing/MarioMVC](https://github.com/Lemonjing/MarioMVC)
+- 示例代码：[https://github.com/Lemonjing/MarioSample](https://github.com/Lemonjing/MarioSample)
 
 # 目录
 
