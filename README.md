@@ -5,8 +5,6 @@
 
 ### MarioMVC 框架结构
 
-![](https://github.com/Lemonjing/resources/blob/master/pics/mario1.jpg)
-
 common包：主要包括框架初始化接口 预定义常量 全局配置单例 线程上下文 前端过滤器
 
 config包：配置加载器
@@ -47,3 +45,5 @@ util包：路径处理工具、异常处理工具、反射工具
 
 - 项目源码：[https://github.com/Lemonjing/MarioMVC](https://github.com/Lemonjing/MarioMVC)
 - 示例代码：[https://github.com/Lemonjing/MarioSample](https://github.com/Lemonjing/MarioSample)
+
+那么，现在[开始](docs/index.md)吧~
